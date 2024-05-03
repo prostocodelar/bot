@@ -5,8 +5,8 @@ import { create_site, send_phone } from "./keyboard/default.js";
 
 dotenv.config();
 
-const token = process.env.BOT_TOKEN;
-const API = process.env.SERVER_API;
+const token = "6796134838:AAE-GPDSbVLGq7OFQX3fogvx7HytVhAPXU0";
+const API = 'https://tech-store/client/check/';
 const bot = new TelegramBot(token, { polling: true });
 
 bot.onText(/\/start/, (msg) => {
@@ -50,7 +50,7 @@ bot.on('contact', (msg) => {
         chat_id: `${chat_id}`, 
         phone_number: phone_number, 
     };
-    const ADD = process.env.SERVER_API2
+    const ADD = "https://tech-store.uz/client/create/"
     fetch(ADD, {
         method: 'POST',
         headers: {
